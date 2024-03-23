@@ -1,0 +1,441 @@
+/*عرفت متغيرات للأوان عشام ما اقعد اكتبها كل مره*/
+:root {
+    --textANDIcons: #000000;
+    --bk: #FFFFFF;
+    --sign-in: #001F7D;
+    --achievements: #002585;
+    --contenerANDregister-line: #264A99;
+    --underLine: #01119E;
+    --transition: all 0.3s ease-in-out;
+    --shadow: #0000002a;
+  }
+  /*هذي الخصائص تنطبق على كل شيء بالصفحه الا الي اغيره انا بعدين*/
+  * {
+    font-family: "Cairo", sans-serif;
+    background-color: var(--bk);
+    margin: 0;
+    padding: 0;
+    color: var(--textANDIcons);
+  }
+  /*الي هو الناف بار خليته ثابت وخليت فيه مسافه بين العناصر
+  2 على الاطراف وشيء بالنص*/
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bk);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 13vh;  
+    box-shadow: 0 5px 10px var(--shadow); /* حددت الظل */
+    z-index: 3;
+  }
+
+  .nav-links-container {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto; 
+  }
+  .nav-links {
+    list-style: none;/*عشان يشيال نقاط*/
+    font-weight: normal; 
+    font-size: 1.2rem; /*عشان حتى لو تغير حجم الشاشه تبقى */
+    display: flex;/*يساعني بترتيب العناصر اسهلل*/
+    justify-content: space-between;
+  }
+  .nav-links li {
+    display: inline-block;/*جنب بعض الروابط*/
+    margin: 1.1rem ; 
+  }
+  a {
+    text-decoration: none;/*الخط الازرق*/
+  }
+  .logo {
+    width: 170px; 
+  }
+  .sign-in button {
+    background-color: var(--sign-in);
+    color: var(--bk);
+    border-radius: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: pre;/*عشان يكون النص مثل ما هو مكتوب بالظبط*/
+    margin-right: 10vw;
+    padding: 0.8rem 1.8rem;
+}
+  .nav-item {
+    position: relative; 
+  }
+
+  .nav-link::after {
+    position: absolute;
+    transition: all 0.2s;
+    content: "";
+    height: 0.5vh;
+    width: 100%;
+    background-color: var(--underLine);
+    border-radius: 15px;
+    bottom: -5px; /* يكون تحت النص */
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+.nav-link:hover::after,
+.nav-links:focus::after {
+    opacity: 1;/*اذا حطيت المؤشر عليه*/
+} 
+
+.nav-links .nav-link.current::after { 
+    opacity: 1; /*الي الحين*/
+}
+
+
+
+
+
+.s1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contener {
+    background-color: var(--contenerANDregister-line);
+    height: 100vh;
+    width: 90vw; 
+    border-radius: 20px;
+    margin-bottom: 8vh;
+    transform: translate(10vw, 5vh);
+    position: relative;
+    z-index: 1;/*يحدد مين فوق ومين تحت*/
+    display: flex;
+    overflow:  hidden;/* الزايد*/
+}
+.main-text{
+    position: absolute;
+    top: 50%;
+    margin-right: 13.5vw;
+    z-index: 1;
+    transform: translateY(-50%);
+    background-color: var(--contenerANDregister-line);
+    text-align: center; 
+    width: 40vw;
+}
+.contener strong{
+    font-size: 3.12rem;
+    background-color: inherit;   /*مالك علاقه بصفات الاب*/
+    padding: 0%; 
+    color: var(--bk);
+}
+.contener .main-text h3{
+    background-color: inherit;
+    color: var(--bk);
+    font-size: 3rem;
+    font-weight: 400;
+}
+.main-img {
+    width: 30vw; 
+    height: auto;
+    margin-left: 12vw;
+    margin-top: 10vh;
+    z-index: 2;
+}
+
+/*الباقي مشروح بسطر او فوق*/
+/*الباقي مشروح بسطر او فوق*/
+
+/*الباقي مشروح بسطر او فوق*/
+
+/*الباقي مشروح بسطر او فوق*/
+
+
+.s2{
+    margin-right: 1vw;
+}
+.about-the-charity {
+    font-size: 1.5rem ;
+    font-weight: bold;
+}
+.p1{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 1.5vw;
+
+}
+.read-more{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--contenerANDregister-line);
+    margin-right: 1.5vw;
+}
+
+
+
+.s3{
+    margin-right: 1vw;
+}
+
+.courses{
+    font-size: 1.5rem ;
+    font-weight: bold;
+    margin-top: 15vh; 
+    margin-bottom: 10vh;
+ }
+.the-courses {
+    display: flex;
+    justify-content: first baseline;
+  }
+  
+@media screen and (max-height: 30vh) 
+and (max-width:15vw){
+    .course-1
+    ,.course-2
+    ,.course-3 {
+        height: 25vh;
+        width: 12.5vw;
+    }
+}/*عشان لا تتغير الشاشه الحجم ما يصير ثابت نفس ما هو*/
+
+.course-1
+,.course-2
+,.course-3 {
+    height: 220px;
+    width: 200px;
+    box-shadow: 
+     0 4px 4px 0 var(--shadow),
+    -4px 0 4px 0 var(--shadow),
+     4px 0 8px 0 var(--shadow);
+    border-radius: 15px; 
+    background-color: var(--bk); 
+    padding-right: 1vw;
+    margin: 0 2.5vw;
+    position: relative;
+    
+}
+/*الباقي مشروح بسطر او فوق*/
+/*الباقي مشروح بسطر او فوق*/
+/*الباقي مشروح بسطر او فوق*/
+
+.course-title h5{
+    font-size: 1.5rem;  
+    font-weight: bold;
+    position: absolute;
+    right: 1vw;
+}
+.description {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex; 
+    justify-content: center;
+}
+.line2, .line3 {
+    position: absolute;
+    top: 10vh;
+}
+
+.online{
+    font-size: 0.8rem;
+    position: absolute;
+    top: 3vh;
+    left: 4vw;
+    white-space: pre;
+}
+.time-text {
+    position: absolute;
+    top: 3vh;
+    right: 3vw;
+    white-space: pre;
+}
+.time-icon{
+    height: 4vh;
+    position: absolute;
+    top: 3vh;
+}
+
+.date-text{
+    position: absolute;
+    top: 12vh;
+}
+.date-icon{
+    height: 3vh;
+    position: absolute;
+    top: 12vh;
+    left: 1vw;
+}
+
+.material-symbols-outlined {
+    color: var(--textANDIcons); 
+}
+.to-register-page {
+    position: absolute;
+    right: 0.5vw;
+}
+.register {
+    background-color: var(--contenerANDregister-line);
+    color: var(--bk);
+    font-weight: bold;
+    padding: 0.3vh 4.5vw; 
+    border-radius: 20px; 
+    font-size: 1rem; 
+    position: absolute;
+    top: 20vh;
+    right: 1.5vw;
+}
+.the-courses {
+    position: relative;
+  }
+.more-courses{
+    height: 10vh;
+    width: 5vw;
+    position: absolute;
+    top: 15vh;
+    right: 70vw;
+    border-radius: 100%;
+    background-color: var(--bk);
+    box-shadow: 
+    0 4px 4px 0 var(--shadow),
+   -4px 0 4px 0 var(--shadow);
+}
+.more-courses h3{
+    text-align: center;
+    margin: 2vh;
+}
+
+
+
+
+
+
+.the-achievements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25vw;
+}
+.names{
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    margin-top: 5vh;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.volunteer-hours{
+    margin-right: 7vw;
+    color: var(--achievements);
+    margin-left: 15vw;
+}
+.beneficiary-charities{
+    margin-right: 1vw;
+    margin-left: 15vw;
+    color: var(--achievements);
+    white-space: pre;
+}
+.volunteers
+{
+    margin-left: 6vw;
+    color: var(--achievements);
+}
+.charity-achievements{
+    font-size: 1.5rem ;
+    font-weight: bold;
+    margin-top: 15vh; 
+    margin-right: 1vw;
+}
+
+.hours-contenr{
+    height: 220px;
+    width: 180px;
+    box-shadow: 
+     0 4px 4px 0 var(--shadow),
+    -4px 0 4px 0 var(--shadow),
+     4px 0 4px 0 var(--shadow);
+    border-radius: 15px; 
+    background-color: var(--bk); 
+    padding-right: 1vw;
+    margin: 0 4vw;
+    position: relative;
+    margin-right: 4vw;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.how-many-hours{
+    font-size: 1.2rem;
+    color: var(--achievements);
+    position: absolute;
+    top: 25vh;
+    right: 4vw;
+    text-align: center;
+}
+
+
+.charity-num-contenr{
+    height: 220px;
+    width: 180px;
+    box-shadow: 
+     0 4px 4px 0 var(--shadow),
+    -4px 0 4px 0 var(--shadow),
+     4px 0 4px 0 var(--shadow);
+    border-radius: 15px; 
+    background-color: var(--bk); 
+    padding-right: 1vw;
+    margin: 0 4vw;
+    position: relative;
+    margin-right: 4vw;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.hours,.num{
+    height: 16vh;
+    width: 8vw;
+    position: absolute;
+    top: 5vh;
+}
+.how-many-charities{
+    font-size: 1.2rem;
+    color: var(--achievements);
+    position: absolute;
+    top: 25vh;
+    right: 2vw;
+    text-align: center;
+}
+
+.volunteers-num{
+    height: 220px;
+    width: 180px;
+    box-shadow: 
+     0 4px 4px 0 var(--shadow),
+    -4px 0 4px 0 var(--shadow),
+     4px 0 4px 0 var(--shadow);
+    border-radius: 15px; 
+    background-color: var(--bk); 
+    padding-right: 1vw;
+    margin: 0 4vw;
+    position: relative;
+    margin-right: 4vw;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.how-many-volunteers{
+    font-size: 1.2rem;
+    color: var(--achievements);
+    position: absolute;
+    top: 25vh;
+    right: 2vw;
+    text-align: center;
+}
+
+.line{
+    background-color: var(--contenerANDregister-line);
+    width: 100%;
+    height: 130px;
+    margin-top: 30vh;
+}
